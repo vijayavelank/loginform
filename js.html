@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+
+    
+</head>
+<body>
+    <h1> login </h1>
+<div class="form">
+    
+             <label> Email </label><br>
+             <input type="email" id="email" name="email" placeholder="Enter your email" email is required><br><br>
+             <label> Password</label><br>
+             <input type="password" id="password" name="password" placeholder=" password" password is required><br><br>
+             <label >Confirm your Password :</label><br>
+             <input type="password" id="cpassword" name="cpassword" placeholder=" confirm password"confirm password is required><br><br>
+            <p id="errormsg" class="error">
+<button onclick="login()">login</button>
+</div>
+
+
+<script>
+
+function login(){
+    const email=document.getElementById("email").value
+
+    const password=document.getElementById("password").value
+
+    const cpassword=document.getElementById("cpassword").value
+  
+    let error=document.getElementById("errormsg")
+
+    error.innerHTML=""
+    if(email==""){
+        error.innerHTML="email is required!"
+        return;
+    }
+    if(password==""){
+        error.innerHTML="password is required!"
+        return;
+    }
+if(cpassword==""){
+    error.innerHTML="Confirm password is required!"
+}
+
+  window.alert("login successfully!!");
+}
+
+</script>
+
+</form>
+<!-- <button onclick="show()">Click me</button>
+
+<script>
+function show() {
+  alert("Button clicked!");
+} -->
+ <!-- <p id="msg">Hello</p>
+
+<script>
+const a = document.getElementById("msg");
+console.log(a.innerText);
+</script> -->
+
+<!-- document.getElementById("msg").innerHTML = "<b>Welcome</b>";
+document.getElementById("box").onmouseover = () => {
+  console.log("Mouse entered"); -->
+
+
+</body>
+</html>
+
